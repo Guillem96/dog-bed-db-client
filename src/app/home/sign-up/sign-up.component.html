@@ -1,0 +1,26 @@
+<h1>Sign up here!</h1>
+<form [formGroup]="signupForm">
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="Username" name="username" formControlName="username">
+    </mat-form-field>
+    <mat-error *ngIf="signupForm.controls.username.invalid && (signupForm.controls.username.dirty || signupForm.controls.username.touched)">
+    </mat-error>
+    <mat-form-field>
+      <input matInput placeholder="Password" name="password" formControlName="password">
+    </mat-form-field>
+    <mat-error *ngIf="signupForm.controls.password.invalid && (signupForm.controls.password.dirty || signupForm.controls.password.touched)">
+    </mat-error>
+    <mat-form-field>
+      <input matInput placeholder="Repeat password" name="password1" formControlName="password1">
+    </mat-form-field>
+    <mat-error *ngIf="signupForm.controls.password1.invalid && (signupForm.controls.password1.dirty || signupForm.controls.password1.touched)">
+    </mat-error>
+    <mat-form-field>
+      <input matInput placeholder="Email" name="email" formControlName="email">
+    </mat-form-field>
+    <mat-error *ngIf="signupForm.controls.email.invalid && (signupForm.controls.email.dirty || signupForm.controls.email.touched)">
+		</mat-error>
+		<button mat-raised-button color="accent">Sign Up</button>
+  </div>
+</form>

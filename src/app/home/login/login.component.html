@@ -1,0 +1,25 @@
+<form style="font-size: .8em" [formGroup]="loginForm" novalidate>
+	<table cellspacing="4">
+		<tr>
+			<td>
+				<mat-form-field>
+					<input matInput placeholder="Username" name="username" formControlName="username">
+					<mat-error *ngIf="loginForm.controls.username.invalid && (loginForm.controls.username.dirty || loginForm.controls.username.touched)">
+						Username is <strong>required</strong>
+					</mat-error>
+				</mat-form-field>
+			</td>
+			<td>
+				<mat-form-field>
+					<input matInput placeholder="Password" name="password" formControlName="password">
+					<mat-error *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">
+						Password is <strong>required</strong>
+					</mat-error>
+				</mat-form-field>
+			</td>
+			<td>
+				<button mat-raised-button color="accent" (onclick)="submitLogin()">Login</button>
+			</td>
+		</tr>
+	</table>
+</form>
