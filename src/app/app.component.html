@@ -2,8 +2,9 @@
   <a class="app-logo" [routerLink]="['/']" mat-button>
     <mat-icon class="icon" inline="true">book</mat-icon> <span>DBDB Diary</span>
   </a>
-  <span class="fill-remaining-space"></span>
-  <app-login></app-login>
+	<span class="fill-remaining-space"></span>
+	<button mat-raised-button *ngIf="auth.isAuthenticated()" color="accent" (click)="logout()" >Logout</button>
+	<app-login *ngIf="!auth.isAuthenticated()"></app-login>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
