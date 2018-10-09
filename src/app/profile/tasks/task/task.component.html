@@ -1,0 +1,17 @@
+<div class="container">
+  <mat-checkbox [ngModel]="task.done" (click)="updateTask()">
+    <p class="name" [ngClass]="{'done': task.done}">{{ task.name }}</p>
+  </mat-checkbox>
+  <mat-grid-list cols="4" rowHeight="3em">
+    <mat-grid-tile [colspan]="3">
+      <p class="description">{{ task.description }}</p>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1">
+      <p class="date">{{ task.date_limit | date:'fullDate' }}</p>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-chip-list *ngIf="task.tags">
+    <mat-chip [ngStyle]="{'background-color': colors[i]}" *ngFor="let tag of task.tags; let i = index">{{ tag }}</mat-chip>
+  </mat-chip-list>
+</div>

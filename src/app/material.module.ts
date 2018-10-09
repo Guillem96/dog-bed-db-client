@@ -5,7 +5,13 @@ import {
 	MatButtonModule, 
 	MatFormFieldModule,
 	MatInputModule, 
-	MatSnackBarModule,
+  MatSnackBarModule,
+  MatListModule,
+  MatDividerModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 } from '@angular/material';
 
 import { MatCardModule } from '@angular/material/card';
@@ -20,7 +26,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 		MatInputModule,
 		MatGridListModule,
 		MatSnackBarModule,
-		MatCardModule
+    MatCardModule,
+    MatListModule,
+    MatDividerModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 	],
   exports: [
 		MatToolbarModule,
@@ -30,7 +42,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 		MatInputModule,
 		MatGridListModule,
 		MatSnackBarModule,
-		MatCardModule
+    MatCardModule,
+    MatListModule,
+    MatDividerModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 	],
 })
 export class MaterialModule { }

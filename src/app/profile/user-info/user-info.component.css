@@ -1,8 +1,43 @@
 .avatar {
-	background-image: url('../../../assets/avatar.png');
   background-size: cover;
+  background-color: rgb(2, 136, 209);
+  margin-left: 2em;
+  margin-top: 5em;
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+}
+
+.header {
+  background-image:url("../../../assets/md.jpg");
+  background-position: bottom;
+  height: 10em;
 }
 
 .card {
-	width: 100%;
+  margin:auto;
+  margin-top: 8em !important;
+  padding: 0;
+	width: 90%;
+}
+.user-info {
+  margin-left: 15em;
+}
+
+.sub-title {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1em;
+}
+
+.hint {
+  font-size: 1em;
+  color: #888888;
+  margin: 0;
+  font-weight: 300;
+}
+
+.align-center {
+  text-align: center;
 }

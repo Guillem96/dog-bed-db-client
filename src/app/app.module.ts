@@ -15,6 +15,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UserInfoComponent } from './profile/user-info/user-info.component';
 import { TasksComponent } from './profile/tasks/tasks.component';
+import { TaskComponent } from './profile/tasks/task/task.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
 	declarations: [
@@ -24,15 +26,17 @@ import { TasksComponent } from './profile/tasks/tasks.component';
 		SignUpComponent,
 		ProfileComponent,
 		UserInfoComponent,
-		TasksComponent
+		TasksComponent,
+		TaskComponent
 	],
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
 		AppRouting,
 		MaterialModule,
-		ReactiveFormsModule,
-		HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule, 
 	],
 	providers: [
 		AuthGuard

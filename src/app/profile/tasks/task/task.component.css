@@ -1,0 +1,24 @@
+.description {
+  font-weight: 300;
+  color: #888888;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.container {
+  padding: 1.2em;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.date {
+  padding: .5em;
+  text-align: center;
+  color: #ff4081;
+}

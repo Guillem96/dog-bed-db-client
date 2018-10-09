@@ -1,0 +1,54 @@
+.grid-container {
+  margin-top: 2em;
+
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card {
+  padding: 0;
+  display: inline-block;
+}
+
+.list-tasks {
+  width: 60%;
+}
+
+.tasks-adder {
+  width: 35%;
+  position: relative;
+  float: right;
+  margin-bottom: 3em;
+
+}
+
+.header {
+  height: 8em;
+  color: white;
+  background: linear-gradient(to right, #4277b8, #6293cf);
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 300;
+  margin-top: .5em;
+  margin-bottom: 0;
+  line-height: 1em;
+}
+
+.date {
+  color: white;
+  font-weight: 300;
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.form-container > * {
+  width: 100%;
+}

@@ -58,7 +58,7 @@ export class SignUpComponent implements OnInit {
 			},
 			error => {
 				console.log(error);
-				this.snackBar.open(error.error.examplemsg, "Try again");
+				this.snackBar.open(error.error.msg, "Try again");
 			});
 		}
 	}

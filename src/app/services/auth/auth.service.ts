@@ -17,7 +17,8 @@ export class AuthService {
 	public signUp(user) : Observable<boolean> {
 		return this.http.post(environment.API_URL + "/sign-up", user).pipe(
 			map(res => {
-				this.user = new User(user);
+        this.user = new User(user);
+        this.updateUser(user);
 				return res != null;
 			})
 		);

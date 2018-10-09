@@ -1,19 +1,27 @@
 <mat-card class="card">
-		<mat-card-header>
-			<img mat-card-image src="../../assets/stars.jpg">
-			<div mat-card-avatar class="avatar"></div>
-		</mat-card-header>
-		<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-		<mat-card-content>
-			<p>
-				The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-				A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-				bred for hunting.
-			</p>
-		</mat-card-content>
-		<mat-card-actions>
-			<button mat-button>LIKE</button>
-			<button mat-button>SHARE</button>
-		</mat-card-actions>
-	</mat-card>
-	
+  <mat-card-header class="header">
+    <img src="../../assets/avatar.png" class="avatar">
+  </mat-card-header>
+  <mat-card-content>
+    <mat-grid-list cols="4" rowHeight="100px" class="user-info">
+      <mat-grid-tile [colspan]="1">
+        <div class="user-prop">
+          <h3 class="sub-title">{{ user.username }}</h3><br>
+          <h4 class="hint">{{ user.first_name }} {{ user.last_name }}</h4>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <div class="user-prop align-center">
+          <h3 class="sub-title" *ngIf="user.tasks">{{ user.tasks.length }}</h3><br>
+          <h4 class="hint">Number of Tasks</h4>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2">
+        <div class="user-prop">
+          <h3 class="sub-title">{{ user.email }}</h3><br>
+          <h4 class="hint">Email</h4>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>
