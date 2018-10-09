@@ -3,6 +3,7 @@
     <mat-icon class="icon" inline="true">book</mat-icon> <span>DBDB Diary</span>
   </a>
 	<span class="fill-remaining-space"></span>
+	<button mat-button class="username" *ngIf="auth.isAuthenticated()"><mat-icon class="account-icon">account_circle</mat-icon> {{ auth.user.username }}</button>
 	<button mat-raised-button *ngIf="auth.isAuthenticated()" color="accent" (click)="logout()" >Logout</button>
 	<app-login *ngIf="!auth.isAuthenticated()"></app-login>
 </mat-toolbar>

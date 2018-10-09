@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
+import { UserInfoComponent } from './profile/user-info/user-info.component';
+import { TasksComponent } from './profile/tasks/tasks.component';
 
 @NgModule({
 	declarations: [
@@ -20,7 +22,9 @@ import { AuthGuard } from './guards/auth.guard';
 		HomeComponent,
 		LoginComponent,
 		SignUpComponent,
-		ProfileComponent
+		ProfileComponent,
+		UserInfoComponent,
+		TasksComponent
 	],
 	imports: [
 		BrowserModule,

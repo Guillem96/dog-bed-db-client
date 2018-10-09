@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../services/auth/auth.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +15,8 @@ export class LoginComponent implements OnInit {
 	
 	constructor(public fb: FormBuilder, 
 							private auth: AuthService,
-							private router: Router) {
+							private router: Router,
+							private snackBar: MatSnackBar) {
 		this.loginForm = fb.group({
 			'username': ['', Validators.compose([Validators.required, Validators.minLength(2)])],
 			'password': ['', Validators.compose([Validators.required, Validators.minLength(2)])],
@@ -33,8 +36,7 @@ export class LoginComponent implements OnInit {
 				},
 				error => {
 					console.log(error);
-					password.setValue("");
-					username.setValue("");
+					this.snackBar.open(error.statusText, "Try again");
 				});
 		}
 	}

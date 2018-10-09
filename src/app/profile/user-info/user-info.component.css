@@ -1,0 +1,8 @@
+.avatar {
+	background-image: url('../../../assets/avatar.png');
+  background-size: cover;
+}
+
+.card {
+	width: 100%;
+}

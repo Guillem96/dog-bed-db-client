@@ -2,6 +2,8 @@ import { Task } from "./task";
 
 Task
 export class User {
+	firstName: string;
+	lastName:string;
 	username: string;
 	password: string;
 	email: string;
@@ -11,6 +13,6 @@ export class User {
 		this.username = user.username;
 		this.password = user.password;
 		this.email = user.email;
-		this.tasks = user.tasks || [];
+		this.tasks = user.tasks.map(t => new Task(t)) || [];
 	}
 }

@@ -11,7 +11,7 @@
 			</td>
 			<td>
 				<mat-form-field>
-					<input matInput placeholder="Password" name="password" formControlName="password">
+					<input matInput type="password" placeholder="Password" name="password" formControlName="password">
 					<mat-error *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">
 						Password is <strong>required</strong>
 					</mat-error>

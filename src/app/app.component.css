@@ -16,3 +16,12 @@
 	height: 4em;
 	box-shadow: 5px 5px 15px #777777;
 }
+
+.username {
+	margin-right: 1em;
+}
+
+.account-icon {
+	font-size: 1.5em;
+	margin-right: .5em;
+}
