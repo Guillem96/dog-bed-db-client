@@ -3,14 +3,15 @@ import { CanActivate, Router } from "@angular/router";
 import { Injectable } from "@angular/core";
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class HomeGuard implements CanActivate {
 
-  constructor(private authService : AuthService) {
+  constructor(private authService : AuthService,
+              private router: Router) {
   }
 
   canActivate() {
 		if(this.authService.isAuthenticated()) 
-			return true;
-		return false;
+      this.router.navigate(["profile"]);
+    return true;
 	}
 }
