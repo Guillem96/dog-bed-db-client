@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 9
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm run postinstall
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist
+  api_key: $GITHUB_TOKEN
+  app: dog-bed-db-client
+  on:
+    branch: master
